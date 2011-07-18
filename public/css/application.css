@@ -1,0 +1,43 @@
+/* 
+Less CSS3 utils.
+*/
+/* Vertical Background Gradient */
+/* Horizontal Background Gradient */
+body {
+  margin: 10px;
+  padding: 0;
+  background-color: #BBD0D1;
+  color: #504C49;
+}
+.hide {
+  display: none;
+}
+#right {
+  float: right;
+  width: 30%;
+  height: auto;
+  display: block;
+}
+#header {
+  height: 50px;
+  background-color: #BBC1BF;
+  margin: 5px;
+}
+#chat {
+  height: 80%;
+  width: auto;
+  margin-bottom: 20px;
+}
+#chatList {
+  min-height: 100px;
+  max-height: 300px;
+  overflow-y: scroll;
+  margin: 5px;
+  padding: 5px;
+  background-color: #BBC1BF;
+}
+.bottom {
+  height: 50px;
+  width: auto;
+  background-color: #BBC1BF;
+}
