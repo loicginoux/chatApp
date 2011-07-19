@@ -33,6 +33,9 @@
 	});
 
 
+//http://blog.superpat.com/wp-content/uploads/2011/06/node-chat1.png
+
+
 //express server configuration
 	app.configure(function() {
 		app.set('views', __dirname + '/views');

@@ -1,50 +1,72 @@
 @import "public/css/utils";
+@import "public/css/reset";
 
-body {
-  margin: 10px;
-  padding: 0;
-  background-color:#BBD0D1;
-  color:#504C49;
+@back:#22252A;
+@toolbar:#753333;
+@info:#555555;
+@message:#eeeeee;
+
+
+body, input {
+  background-color:@back;
+  color:@message;
+  font-size: 18px;
 }
 
 .hide{
   display:none;
 }
 
-#right{
-  float: right;
-  width:30%;
-  height:auto;
-  display:block;
-}
-
-#header{
-  height:50px;
-  background-color:#BBC1BF;
-  margin:5px;
-}
-
-#chat{
-  height: 80%;
-  width:auto;
-  margin-bottom: 20px;
-}
-
 #chatList{
-  min-height:100px;
-  max-height:300px;
-  overflow-y: scroll;
-  margin:5px;
-  padding:5px;
-  background-color:#BBC1BF;
-  
+	list-style:none;
+  padding: 4px 10px;
+}
+
+.info{
+	color:@info;
+}
+
+#toolbar{
+background-color: @toolbar;
+height:30px;
+bottom:50px;
+position:fixed;
+left:0;
+right:0;
+}
+
+.toolbarInfo{
+ float: left;  
+}
+
+.count{
+ float: right;  
+}
+
+#toolbar p{
+  padding: 4px 10px;
+  display:inline;
 }
 
 .bottom{
   height:50px;
-  width:auto;
-  background-color:#BBC1BF;
-  
+  bottom:0;
+  position:fixed;
+  left:0;
+  right:0;
+}
+
+label {
+display: none;
+}
+
+input {
+width: 96%;
+padding: 10px 2%;
+line-height: 20px;
+color: @message;
+background: @back;
+border:none;
 }
 
 

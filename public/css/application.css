@@ -3,41 +3,214 @@ Less CSS3 utils.
 */
 /* Vertical Background Gradient */
 /* Horizontal Background Gradient */
-body {
-  margin: 10px;
+/*reset*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
   padding: 0;
-  background-color: #BBD0D1;
-  color: #504C49;
+  margin: 0;
+  border: 0;
+  offset: 0;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+  /*-webkit-backface-visibility:hidden*/
+}
+body,
+input,
+textarea,
+select,
+th,
+td {
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  text-rendering: optimizeLegibility;
+  color: #464646;
+  font: 13px/20px "Helvetica Neue", Ubuntu, sans-serif;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+}
+body, html {
+  height: 100%\9;
+  min-height: 100%;
+  max-height: auto;
+  image-rendering: optimizeQuality;
+  text-shadow: none;
+  /*-webkit-backface-visibility:visible*/
+}
+html.login body,
+html.login,
+body.addFiles,
+html.height100 {
+  height: 100%;
+}
+html.login {
+  background: #181818;
+}
+html body.articles,
+html body.dash,
+html.articles,
+html.dash {
+  background: url(../images/articleNavBg.png) repeat-y #ffffff;
+}
+html body.publicUpload {
+  background: url(../images/articleNavBgWhite.png) repeat-y #ffffff;
+}
+html body.publicUpload .leftFixed {
+  background: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: #2382e1;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:focus {
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+.hide {
+  display: none !important;
+}
+.clear {
+  clear: both;
+}
+.bottomPadding {
+  height: 100px;
+  clear: both;
+}
+a:active {
+  color: #000000;
+}
+.articleNav a:active {
+  color: #2382e1;
+}
+.active a:hover {
+  text-decoration: none;
+}
+.floatLeft {
+  float: left !important;
+}
+.floatRight {
+  float: right !important;
+}
+.marginTop {
+  margin-top: 45px;
+}
+.red {
+  color: red;
+}
+.grey {
+  color: #999999;
+}
+body, input {
+  background-color: #22252a;
+  color: #eeeeee;
+  font-size: 18px;
 }
 .hide {
   display: none;
 }
-#right {
-  float: right;
-  width: 30%;
-  height: auto;
-  display: block;
-}
-#header {
-  height: 50px;
-  background-color: #BBC1BF;
-  margin: 5px;
-}
-#chat {
-  height: 80%;
-  width: auto;
-  margin-bottom: 20px;
-}
 #chatList {
-  min-height: 100px;
-  max-height: 300px;
-  overflow-y: scroll;
-  margin: 5px;
-  padding: 5px;
-  background-color: #BBC1BF;
+  list-style: none;
+  padding: 4px 10px;
+}
+.info {
+  color: #555555;
+}
+#toolbar {
+  background-color: #753333;
+  height: 30px;
+  bottom: 50px;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+.toolbarInfo {
+  float: left;
+}
+.count {
+  float: right;
+}
+#toolbar p {
+  padding: 4px 10px;
+  display: inline;
 }
 .bottom {
   height: 50px;
-  width: auto;
-  background-color: #BBC1BF;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+label {
+  display: none;
+}
+input {
+  width: 96%;
+  padding: 10px 2%;
+  line-height: 20px;
+  color: #eeeeee;
+  background: #22252a;
+  border: none;
 }

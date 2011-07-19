@@ -3,9 +3,7 @@ Messages = require('controllers/Messages')
 utils = require('./utils')
 module.exports = Spine.Controller.create
   events:
-    "click .enter": "enterChatRoom"
     "keydown input[name=user_name]": 'enterChatRoom'
-    "click .send": "send"
     "keydown input[name=message]" : 'send'
   proxied: [
     'send',
@@ -16,6 +14,7 @@ module.exports = Spine.Controller.create
   ]
   elements:
     ".count"                : "count"
+    ".toolbarInfo"          : "toolbarInfo"
     "#client_count"         : "clientCount"
     'input[name=user_name]' : "nameField"
     'input[name=message]'   : 'messageField'
@@ -31,7 +30,7 @@ module.exports = Spine.Controller.create
     
   #notify the server for a new message sent 
   send: (e) ->
-    if (e.type=='click' || (e.type=='keydown' && e.keyCode==13))
+    if (e.type=='keydown' && e.keyCode==13 && this.messageField.val() != "")
       data = user: this.userName
       content: this.messageField.val()
       type:'talk'
@@ -70,7 +69,7 @@ module.exports = Spine.Controller.create
     this.chatList.append view.render().el
   
   userExists: ->
-    alert('user already exists.')
+    this.toolbarInfo.html "user already exists!"
     this.socket.emit('disconnect')
     this.nameField.focus()
     
@@ -95,7 +94,7 @@ module.exports = Spine.Controller.create
             
   
   enterChatRoom: (e) ->
-    if (e.type=='click' || (e.type=='keydown' && e.keyCode==13))
+    if (e.type=='keydown' && e.keyCode==13)
       ##get the user name
       this.userName = this.nameField.val()
       ## we open the connection
@@ -107,3 +106,5 @@ module.exports = Spine.Controller.create
       this.socket.on 'userExists', this.userExists
       ## notify the server for a new user
       this.socket.emit 'userJoint', {name:this.userName, time:utils.getDate()}
+      this.toolbarInfo.html "message:"
+      

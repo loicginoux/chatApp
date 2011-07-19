@@ -17,38 +17,32 @@
 	</script>
 
 	<script type="text/x-jquery-tmpl" id="msgConnectTmpl">
-	<li>${time}:${user} joint</li> 
+	<li class='info'>${time}:${user} joint</li> 
 	</script>
 	<script type="text/x-jquery-tmpl" id="msgTalkTmpl">
-	<li>${time} - ${user}: ${content}</li> 
+	<li><span class="info">${time} - ${user}:</span> ${content}</li> 
 	</script>
 	<script type="text/x-jquery-tmpl" id="msgDisconnectTmpl">
-	<li>${time}:${user} left</li> 
+	<li class='info'>${time}:${user} left</li> 
 	</script>
 </head>
 <body>
-	<div id="right">
-		<p>
-			<span id="client_count">0</span> users connected
-		</p>
-	</div>
-	<div id="header">
-		<h1>Chat application</h1>
-	</div>
-	<div id="chat">
-		<ul id="chatList"></ul>
-		<div class="bottom">
+	<ul id="chatList"></ul>
+	<div id="toolbar">
+		<p class='toolbarInfo'>Enter your name:</p>
+		<p class='count'><span id="client_count">0</span> users connected</p>
+	</div>		
+	<div class="bottom">
+		<form action="#">
 			<div class="name">
 				<label for="">Name:</label> 
 				<input type="text" name='user_name'/>
-				<a href="#"  class="enter">Enter chat room</a> 
 			</div>
 			<div class="message hide">
 				<label for="">Message:</label> 
 				<input type="text" name='message'/>
-				<a href="#" class="send">Send</a> 
 			</div>
-		</div>
-	</div> 
+		</form>
+	</div>
 </body>
 </html>
